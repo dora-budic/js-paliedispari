@@ -1,8 +1,16 @@
 // PRIMO ESERCIZIO
 
 // Chiedere all’utente di inserire una parola
-var word = prompt("Write one word");
-var word = word.charAt(0).toLowerCase() + word.substring(1);
+var control = true;
+while (control) {
+  var word = prompt("Write one word");
+  var word = word.charAt(0).toLowerCase() + word.substring(1);
+  if (!isNaN(word)) {
+    console.log("You have to write a word, not a number!!");
+  } else {
+    control = false;
+  }
+}
 
 // Chiamo la funzione
 var palindromeResult = palindromeWord(word);
