@@ -3,7 +3,6 @@
 // Chiedere all’utente di inserire una parola
 var word = prompt("Write one word");
 var word = word.charAt(0).toLowerCase() + word.substring(1);
-console.log(word);
 
 // Chiamo la funzione
 var palindromeResult = palindromeWord(word);
