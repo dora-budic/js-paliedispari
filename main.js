@@ -30,14 +30,14 @@ function palindromeWord(string) {
 var control1 = true;
 while (control1) {
   var numberType = prompt("Odd or even?");
-  if (isNaN(numberType)) {
+  var numberType = numberType.charAt(0).toUpperCase() + numberType.substring(1);
+  if (numberType == "Odd" || numberType == "Even") {
     control1 = false;
   } else {
     console.log("You have to write the word 'Odd' or 'Even'!!");
   }
 }
 
-var numberType = numberType.charAt(0).toUpperCase() + numberType.substring(1);
 document.getElementById('numer-type').innerHTML += numberType;
 
 // Chiedere all'utente un numero tra 1 e 5
